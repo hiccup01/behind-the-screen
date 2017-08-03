@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "svelte": "^1.27.0",
+    "sveltify": "^1.1.0"
+  },
+  "name": "behind-the-screen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hiccup01/behind-the-screen.git",
+  "author": "hiccup01 <hiccup01@hiccup01.com>",
+  "license": "MIT"
+}
