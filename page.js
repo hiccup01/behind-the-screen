@@ -1,7 +1,7 @@
-var FactBubble = require("./FactBubble.svelte");
-var testbubble = new FactBubble({
-	target: document.querySelector('test'),
+var Button = require("./ChangeButton.svelte");
+var nextButton = new ChangeButton({
+	target: document.querySelector('thingy'),
 	data: {
-		content: "maybe"
 	}
-})
+});
+console.log("test");

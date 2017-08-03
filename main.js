@@ -2,45 +2,26 @@
 'use strict';
 
 function create_main_fragment ( state, component ) {
-	var div, div_1, div_2, text_value, text;
+	var button;
 
 	return {
 		create: function () {
-			div = createElement( 'div' );
-			div_1 = createElement( 'div' );
-			div_2 = createElement( 'div' );
-			text = createText( text_value = state.content );
-			this.hydrate();
-		},
-
-		hydrate: function ( nodes ) {
-			div.className = "bubble";
-			div_1.style.cssText = "padding-top:15px;height:85px;width:100px;";
-			div_2.style.cssText = "margin-left:auto;margin-right:auto;width:70px;height:70px;";
+			button = createElement( 'button' );
 		},
 
 		mount: function ( target, anchor ) {
-			insertNode( div, target, anchor );
-			appendNode( div_1, div );
-			appendNode( div_2, div_1 );
-			appendNode( text, div_2 );
-		},
-
-		update: function ( changed, state ) {
-			if ( text_value !== ( text_value = state.content ) ) {
-				text.data = text_value;
-			}
+			insertNode( button, target, anchor );
 		},
 
 		unmount: function () {
-			detachNode( div );
+			detachNode( button );
 		},
 
 		destroy: noop
 	};
 }
 
-function FactBubble ( options ) {
+function ChangeButton ( options ) {
 	options = options || {};
 	this._state = options.data || {};
 
@@ -64,7 +45,7 @@ function FactBubble ( options ) {
 	}
 }
 
-assign( FactBubble.prototype, {
+assign( ChangeButton.prototype, {
  	get: get,
  	fire: fire,
  	observe: observe,
@@ -72,15 +53,14 @@ assign( FactBubble.prototype, {
  	set: set
  });
 
-FactBubble.prototype._set = function _set ( newState ) {
+ChangeButton.prototype._set = function _set ( newState ) {
 	var oldState = this._state;
 	this._state = assign( {}, oldState, newState );
 	dispatchObservers( this, this._observers.pre, newState, oldState );
-	this._fragment.update( newState, this._state );
 	dispatchObservers( this, this._observers.post, newState, oldState );
 };
 
-FactBubble.prototype.teardown = FactBubble.prototype.destroy = function destroy ( detach ) {
+ChangeButton.prototype.teardown = ChangeButton.prototype.destroy = function destroy ( detach ) {
 	this.fire( 'destroy' );
 
 	if ( detach !== false ) this._fragment.unmount();
@@ -95,16 +75,8 @@ function createElement(name) {
 	return document.createElement(name);
 }
 
-function createText(data) {
-	return document.createTextNode(data);
-}
-
 function insertNode(node, target, anchor) {
 	target.insertBefore(node, anchor);
-}
-
-function appendNode(node, target) {
-	target.appendChild(node);
 }
 
 function detachNode(node) {
@@ -216,14 +188,14 @@ function differs(a, b) {
 	return a !== b || ((a && typeof a === 'object') || typeof a === 'function');
 }
 
-module.exports = FactBubble;
+module.exports = ChangeButton;
 
 },{}],2:[function(require,module,exports){
-var FactBubble = require("./FactBubble.svelte");
-var testbubble = new FactBubble({
-	target: document.querySelector('test'),
+var Button = require("./ChangeButton.svelte");
+var nextButton = new ChangeButton({
+	target: document.querySelector('thingy'),
 	data: {
-		content: "maybe"
 	}
-})
-},{"./FactBubble.svelte":1}]},{},[2]);
+});
+console.log("test");
+},{"./ChangeButton.svelte":1}]},{},[2]);
