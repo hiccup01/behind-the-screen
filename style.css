@@ -1,3 +1,10 @@
+/* Behind the Screen main CSS file                     */
+/* Copyright hiccup01 <hiccup@hiccup01.com> 2017.      */
+
+/* Import font sizes sheet for both mobile and desktop */
+
+@import url("font-sizes.css");
+
 /*html {
 	height: 100%;
 }*/
@@ -72,10 +79,11 @@ img {
 	right: 0;
 	background-color: #EEE;
 	padding: 5px;
+
 	border-bottom-left-radius: 10px;
 }
 
-@media (max-width: 900px) { /* This is for mobile devices */
+@media (max-width: 1080px) { /* This is for mobile devices */
 	.content-box {
 		flex-direction: column;
 		height: 100%;
@@ -89,8 +97,12 @@ img {
 	}
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1081px) {
 	.real-image { /* This is a fix to make images look good on both desktop and mobile */
 		display: none;
+	}
+
+	.content-box {
+		min-height: 500px
 	}
 }
