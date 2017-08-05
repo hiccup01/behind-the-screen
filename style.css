@@ -1,8 +1,6 @@
 /* Behind the Screen main CSS file                     */
 /* Copyright hiccup01 <hiccup@hiccup01.com> 2017.      */
 
-/* Import font sizes sheet for both mobile and desktop */
-
 /*html {
 	height: 100%;
 }*/
@@ -15,6 +13,7 @@ body {
 	align-items: center;
 	height: 100%;
 	margin: 0 0 0 0;
+	font-size: 16pt;
 }
 
 #title {
