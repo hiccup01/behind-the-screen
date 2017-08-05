@@ -45,9 +45,10 @@ body {
 
 .content {
 	width: 60%;
-	background: #eaf8f9;
+	background: white;
 	border-radius: 15px;
-	padding: 10px;
+	/*padding: 10px;*/
+	border: 2px solid black;
 }
 
 .content-image {
@@ -78,12 +79,29 @@ img {
 	background-color: #EEE;
 	padding: 5px;
 	border-bottom-left-radius: 10px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#jump-to-content {
+	text-decoration: none;
+	color: black;
+	animation-name: "bold-fade";
+	animation-duration: 1.5s;
+	font-size: xx-large;
+	animation-timing-function: cubic-bezier(.7, 0, .3, 1);
+	animation-iteration-count: infinite;
+}
+
+h6 {
+	margin: 0 0 0 0;
 }
 
 @media (max-width: 1080px) { /* This is for mobile devices */
 	.content-box {
 		flex-direction: column;
-		height: 100%;
+		width: 100%;
+		padding: 0 0 0 0;
 	}
 	.content {
 		width: 100%;
@@ -91,6 +109,9 @@ img {
 	.content-image {
 		width: 100%;
 		height: 100%;
+	}
+	p {
+		margin: 7pt;
 	}
 }
 
@@ -101,6 +122,9 @@ img {
 
 	.content-box {
 		min-height: 500px
+	}
+	.content {
+		padding: 10px;
 	}
 }
 
@@ -160,4 +184,10 @@ img {
     body {
     	font-size: 89px;
     }
+}
+
+@keyframes bold-fade {
+	0% {font-weight: 300;}
+	50% {font-weight: 700;}
+	100% {font-weight: 300;}
 }
