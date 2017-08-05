@@ -1,6 +1,7 @@
 /*html {
 	height: 100%;
 }*/
+
 body {
 	font-family: Roboto Slab, -apple-system, sans-serif;
 	display: flex;
@@ -10,6 +11,7 @@ body {
 	height: 100%;
 	margin: 0 0 0 0;
 }
+
 #title {
 	text-align: center;
 	display: flex;
@@ -17,41 +19,66 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	height: 100%;
+	/*flex-grow: 100000;*/
+	height: 100vh;
 }
+
 #title-text {
 	padding-bottom: 0;
 	height: 10px;
 }
+
 .content-box {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
 	/*align-items: center;
 	width: 60%;*/
 	justify-content: stretch;
 	padding: 10px;
-	height: auto;
+	/*height: auto;*/
 }
+
 .content {
-	width: auto;
+	width: 60%;
 	background: #eaf8f9;
 	border-radius: 15px;
+	padding: 10px;
 }
+
 .content-image {
 	width: 40%;
-	height: 40%;
 	border-radius: 15px;
 	/*justify-content: flex-end;*/
+	/*padding: 10px;*/
+	background: url("http://art-coll.narod.ru/973/cat_58/cat_54.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
+
 img {
 	width: 100%;
 	border-radius: 15px;
 }
 
-@media handheld (max-width: 768px) {
-	.context-box {
-		flex-direction: column !important;
+#handcraft {
+	
+}
+
+#credits {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: #EEE;
+	padding: 5px;
+	border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 900px) { /* This is for mobile devices */
+	.content-box {
+		flex-direction: column;
+		height: 100%;
 	}
 	.content {
 		width: 100%;
@@ -59,5 +86,11 @@ img {
 	.content-image {
 		width: 100%;
 		height: 100%;
+	}
+}
+
+@media (min-width: 901px) {
+	.real-image { /* This is a fix to make images look good on both desktop and mobile */
+		display: none;
 	}
 }
