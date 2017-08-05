@@ -5,8 +5,9 @@
 	height: 100%;
 }*/
 
+@import "fonts.css";
+
 body {
-	font-family: Roboto Slab, -apple-system, sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -105,6 +106,11 @@ h6 {
 	}
 	.content {
 		width: 100%;
+		border-color: black;
+		border-top-width: 2px;
+		border-bottom-width: 2px;
+		border-left-width: 0px;
+		border-right-width: 0px;
 	}
 	.content-image {
 		width: 100%;
@@ -126,64 +132,6 @@ h6 {
 	.content {
 		padding: 10px;
 	}
-}
-
-/* This code down here is for setting the font size to look good on displays with differnet pixel densities */
-
-/* Font height should be about 5.5mm */
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { /* Retina resolution */
-    body {
-    	font-size: 43px;
-    }
-}
-
-@media (min-resolution: 120dpi) { /* ldpi */
-    body {
-    	font-size: 27px;
-    }
-}
-
-@media (min-resolution: 160dpi) { /* mdpi */
-    body {
-    	font-size: 36px;
-    }
-}
-
-@media (min-resolution: 210dpi) { /* tvdpi */
-    body {
-    	font-size: 47px;
-    }
-}
-
-@media (min-resolution: 240dpi) { /* hdpi */
-    body {
-    	font-size: 53px;
-    }
-}
-
-@media (min-resolution: 320dpi) { /* xdpi */
-    body {
-    	font-size: 71px;
-    }
-}
-
-@media (min-resolution: 480dpi) { /* xxdpi */
-    body {
-    	font-size: 107px;
-    }
-}
-
-@media (min-resolution: 640dpi) { /* xxxdpi */
-    body {
-    	font-size: 142px;
-    }
-}
-
-@media (min-resolution: 400dpi) { /* Plus model iPhones */
-    body {
-    	font-size: 89px;
-    }
 }
 
 @keyframes bold-fade {
