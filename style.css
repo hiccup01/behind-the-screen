@@ -3,7 +3,7 @@
 
 /* Import font sizes sheet for both mobile and desktop */
 
-@import url("font-sizes.css");
+@import "font-sizes.css";
 
 /*html {
 	height: 100%;
