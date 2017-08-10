@@ -88,10 +88,11 @@ img {
 	text-decoration: none;
 	color: black;
 	animation-name: "bold-fade";
-	animation-duration: 1.5s;
+	animation-duration: .75s;
 	font-size: xx-large;
 	animation-timing-function: cubic-bezier(.7, 0, .3, 1);
 	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 h6 {
@@ -136,6 +137,5 @@ h6 {
 
 @keyframes bold-fade {
 	0% {font-weight: 300;}
-	50% {font-weight: 700;}
-	100% {font-weight: 300;}
+	100% {font-weight: 700;}
 }
