@@ -99,6 +99,10 @@ h6 {
 	margin: 0 0 0 0;
 }
 
+#source {
+	font-size: .75em;
+}
+
 @media (max-width: 1080px) { /* This is for mobile devices */
 	.content-box {
 		flex-direction: column;
