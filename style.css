@@ -107,6 +107,10 @@ h6 {
 	width: 100%
 }
 
+ul {
+	list-style-position: inside;
+}
+
 @media (max-width: 1080px) { /* This is for mobile devices */
 	.content-box {
 		flex-direction: column;
