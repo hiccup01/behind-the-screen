@@ -103,6 +103,10 @@ h6 {
 	font-size: .75em;
 }
 
+#content-box-cite > .content {
+	width: 100%
+}
+
 @media (max-width: 1080px) { /* This is for mobile devices */
 	.content-box {
 		flex-direction: column;

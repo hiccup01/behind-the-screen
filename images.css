@@ -1,31 +1,31 @@
 #circuit-board {
-	background-image: url("http://www.publicdomainpictures.net/pictures/190000/velka/electronic-circuit-board.jpg");
+	background-image: url("./images/electronic-circuit-board.jpg");
 }
 
 #coltan-mine {
-	background-image: url("http://2.bp.blogspot.com/-MfE3QY8uaKQ/VSw0MNhBSsI/AAAAAAAAAdk/WwHv6GAyHdY/s1600/Wolframite_Mining_in_Kailo2%2C_DRC.jpg");
+	background-image: url("./images/Wolframite_Mining_in_Kailo_DRC.jpg");
 }
 
 #pile-o-tantalum {
-	background-image: url("http://www.israspecmet.com/wp-content/uploads/2014/12/Tantalum-CP-Scrap.jpg");
+	background-image: url("./images/Tantalum-CP-Scrap.jpg");
 }
 
 #soldier-pic {
-	background-image: url("http://www.sbs.com.au/news/sites/sbs.com.au.news/files/A%20group%20of%20M23%20rebel%20fighters%20-%20AAP.jpg");
+	background-image: url("./images/fighters.jpg");
 }
 
 #fairphone-pic {
-	background-image: url("https://d3nevzfk7ii3be.cloudfront.net/igi/yXuyUATwQcmYlqlD.huge");
+	background-image: url("./images/fairphone.png");
 }
 
 #re-map {
-	background-image: url("./resource-map.png");
+	background-image: url("./images/resource-map.png");
 }
 
 #fairphone-chart {
-	background-image: url("https://www.fairphone.com/wp-content/uploads/2016/06/HOW_WE_WORK-2.jpg");
+	background-image: url("./images/HOW_WE_WORK-2.jpg");
 }
 
 #final-pic {
-	background-image: url("https://www.thestar.com/content/dam/thestar/news/world/2013/05/23/children_as_young_as_8_working_in_congo_copper_mines_in_democratic_republic_of_congo/congo_child_miners.jpg");
+	background-image: url("./images/congo_child_miners.jpg");
 }
