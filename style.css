@@ -111,6 +111,10 @@ ul {
 	list-style-position: inside;
 }
 
+#content-box-cite {
+	overflow: scroll;
+}
+
 @media (max-width: 1080px) { /* This is for mobile devices */
 	.content-box {
 		flex-direction: column;
